@@ -30,6 +30,26 @@
                 return false;
             }
         }
+
+        function checkUsername() {
+            let username = document.getElementById("agent").value;
+            if (username != null && username != "" && username != undefined) {
+                return true;
+            } else {
+                alert("用户名不能为空！")
+                return false;
+            }
+        }
+
+        function checkPwd() {
+            let password = document.getElementById("password").value;
+            if (password != null && password != "" && password != undefined) {
+                return true;
+            } else {
+                alert("密码不能为空！")
+                return false;
+            }
+        }
     </script>
 </head>
 
@@ -41,11 +61,13 @@
             <form id="signupForm" method="post" action="LoginServlet" class="zcform">
                 <p class="clearfix">
                     <label class="one" for="agent">用户名：</label>
-                    <input id="agent" name="username" type="text" class="required" value placeholder="请输入您的用户名"/>
+                    <input id="agent" name="username" onblur="return checkUsername()" type="text" class="required" value
+                           placeholder="请输入您的用户名"/>
                 </p>
                 <p class="clearfix">
                     <label class="one" for="password">登录密码：</label>
-                    <input id="password" name="password" type="password" class="{required:true,rangelength:[8,20],}"
+                    <input id="password" name="password" type="password" onblur="return checkPwd()"
+                           class="{required:true,rangelength:[8,20],}"
                            value placeholder="请输入密码"/><br>
 
                 </p>

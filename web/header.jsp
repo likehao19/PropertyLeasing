@@ -76,7 +76,7 @@
             <li><a href="FindAllHorseServlet?categoryid=2">新房</a></li>
             <li><a href="FindAllHorseServlet?categoryid=3">二手房</a></li>
             <c:if test="${sessionScope.USER!=null}">
-                <li class="zhiding"><a href="javascript:;">指定购房</a></li>
+              <%--  <li class="zhiding"><a href="javascript:;">指定购房</a></li>--%>
                 <li><a href="FindAllAgentServlet">申请自由经纪人</a></li>
             </c:if>
             <li><a href="about.jsp">关于我们</a></li>

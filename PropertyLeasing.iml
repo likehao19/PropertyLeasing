@@ -32,5 +32,7 @@
     <orderEntry type="library" exported="" name="Jstl" level="project" />
     <orderEntry type="library" exported="" name="standard" level="project" />
     <orderEntry type="library" exported="" name="fastjson-1.2.5" level="project" />
+    <orderEntry type="library" name="lombok" level="project" />
+    <orderEntry type="library" name="lombok  (2)" level="project" />
   </component>
 </module>

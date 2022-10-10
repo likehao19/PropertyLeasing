@@ -17,32 +17,6 @@
             /* $("div[class='imgUpload']").empty();*/
             $("div[class='imgUpload']").html(html);
         })
-
-        function uploadImg() {
-            alert(11)
-            let formData = new FormData(document.getElementById("form"));
-            alert(formData)
-            $.ajax({
-                type: "post",
-                url: "AgentImgServlet",
-                async: false,
-                processData: false,
-                contentType: false,
-                data: formData,
-                dataType: "json",
-                success: function (msg) {
-                    alert("上传成功")
-                    if (msg.file != null) {
-                        let html = "<img src='" + msg.file + "' width='100' height='100'/>";
-                        $("div[class='imgUpload']").empty();
-                        $("div[class='imgUpload']").html(html);
-                    }
-                },
-                error: function () {
-                    alert("当前服务繁忙，请稍后再试");
-                }
-            })
-        }
     </script>
 </head>
 
@@ -57,7 +31,7 @@
             <h3 class="vipright-title">申请社区自由经纪人</h3>
 
 
-            <form enctype="multipart/form-data" id="form">
+          <%--  <form enctype="multipart/form-data" id="form">
                 <dl class="vip-touxiang">
                     <dt>
                         <div class="imgUpload">
@@ -73,7 +47,7 @@
                     </dd>
                     <div class="clearfix"></div>
                 </dl><!--vip-touxiang/-->
-            </form>
+            </form>--%>
 
             <form action="ApplyAgentServlet" method="post">
                 <table class="grinfo">

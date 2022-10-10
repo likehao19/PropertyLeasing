@@ -37,12 +37,10 @@ public class SelectedServlet extends HttpServlet {
 
         //均未选择 1234
         if (qq.startsWith("0") && w[0].startsWith("0") && r[0].startsWith("0") && tt.startsWith("0")) {
-            System.out.println(1234);
             horse = lists;
         }
         //区域未选择1
         if (qq.startsWith("0") && !w[0].startsWith("0") && !r[0].startsWith("0") && !tt.startsWith("0")) {
-            System.out.println(1);
             horse = lists.stream().
                     filter(h -> h.getRent() >= Double.parseDouble(w[0])).filter(h -> h.getRent() < Double.parseDouble(w[1])).
                     filter(h -> h.getArea() >= Double.parseDouble(r[0])).filter(h -> h.getArea() < Double.parseDouble(r[1])).
@@ -51,7 +49,6 @@ public class SelectedServlet extends HttpServlet {
         }
         //租金未选择2
         if (!qq.startsWith("0") && w[0].startsWith("0") && !r[0].startsWith("0") && !tt.startsWith("0")) {
-            System.out.println(2);
             horse = lists.stream().
                     filter(h -> h.getCommunityid() == Integer.parseInt(qq)).
                     filter(h -> h.getArea() >= Double.parseDouble(r[0])).filter(h -> h.getArea() < Double.parseDouble(r[1])).
@@ -60,7 +57,6 @@ public class SelectedServlet extends HttpServlet {
         }
         //面积未选择3
         if (!qq.startsWith("0") && !w[0].startsWith("0") && r[0].startsWith("0") && !tt.startsWith("0")) {
-            System.out.println(3);
             horse = lists.stream().
                     filter(h -> h.getCommunityid() == Integer.parseInt(qq)).
                     filter(h -> h.getRent() >= Double.parseDouble(w[0])).filter(h -> h.getRent() < Double.parseDouble(w[1])).
@@ -69,7 +65,6 @@ public class SelectedServlet extends HttpServlet {
         }
         //房型未选择4
         if (!qq.startsWith("0") && !w[0].startsWith("0") && !r[0].startsWith("0") && tt.startsWith("0")) {
-            System.out.println(4);
             horse = lists.stream().
                     filter(h -> h.getCommunityid() == Integer.parseInt(qq)).
                     filter(h -> h.getRent() >= Double.parseDouble(w[0])).filter(h -> h.getRent() < Double.parseDouble(w[1])).
@@ -78,7 +73,6 @@ public class SelectedServlet extends HttpServlet {
         }
         //区域，租金未选择12
         if (qq.startsWith("0") && w[0].startsWith("0") && !r[0].startsWith("0") && !tt.startsWith("0")) {
-            System.out.println(12);
             horse = lists.stream().
                     filter(h -> h.getArea() >= Double.parseDouble(r[0])).filter(h -> h.getArea() < Double.parseDouble(r[1])).
                     filter(h -> h.getTypeid() == Integer.parseInt(tt)).
@@ -86,7 +80,6 @@ public class SelectedServlet extends HttpServlet {
         }
         //区域，面积未选择13
         if (qq.startsWith("0") && !w[0].startsWith("0") && r[0].startsWith("0") && !tt.startsWith("0")) {
-            System.out.println(13);
             horse = lists.stream().
                     filter(h -> h.getRent() >= Double.parseDouble(w[0])).filter(h -> h.getRent() < Double.parseDouble(w[1])).
                     filter(h -> h.getTypeid() == Integer.parseInt(tt)).
@@ -94,7 +87,6 @@ public class SelectedServlet extends HttpServlet {
         }
         //区域，房型未选择14
         if (qq.startsWith("0") && !w[0].startsWith("0") && !r[0].startsWith("0") && tt.startsWith("0")) {
-            System.out.println(14);
             horse = lists.stream().
                     filter(h -> h.getRent() >= Double.parseDouble(w[0])).filter(h -> h.getRent() < Double.parseDouble(w[1])).
                     filter(h -> h.getArea() >= Double.parseDouble(r[0])).filter(h -> h.getArea() < Double.parseDouble(r[1])).
@@ -102,21 +94,18 @@ public class SelectedServlet extends HttpServlet {
         }
         //区域，租金，面积未选择123
         if (qq.startsWith("0") && w[0].startsWith("0") && r[0].startsWith("0") && !tt.startsWith("0")) {
-            System.out.println(123);
             horse = lists.stream().
                     filter(h -> h.getTypeid() == Integer.parseInt(tt)).
                     collect(Collectors.toList());
         }
         //区域，面积，房型未选择124
         if (qq.startsWith("0") && w[0].startsWith("0") && !r[0].startsWith("0") && tt.startsWith("0")) {
-            System.out.println(124);
             horse = lists.stream().
                     filter(h -> h.getArea() >= Double.parseDouble(r[0])).filter(h -> h.getArea() < Double.parseDouble(r[1])).
                     collect(Collectors.toList());
         }
         //区域，租金，房型未选择134
         if (qq.startsWith("0") && !w[0].startsWith("0") && r[0].startsWith("0") && tt.startsWith("0")) {
-            System.out.println(134);
             horse = lists.stream().
                     filter(h -> h.getRent() >= Double.parseDouble(w[0])).filter(h -> h.getRent() < Double.parseDouble(w[1])).
                     collect(Collectors.toList());
@@ -124,7 +113,6 @@ public class SelectedServlet extends HttpServlet {
 
         //租金，面积未选择23
         if (!qq.startsWith("0") && w[0].startsWith("0") && r[0].startsWith("0") && !tt.startsWith("0")) {
-            System.out.println(23);
             horse = lists.stream().
                     filter(h -> h.getCommunityid() == Integer.parseInt(qq)).
                     filter(h -> h.getTypeid() == Integer.parseInt(tt)).
@@ -132,7 +120,6 @@ public class SelectedServlet extends HttpServlet {
         }
         //租金，房型未选择24
         if (!qq.startsWith("0") && w[0].startsWith("0") && !r[0].startsWith("0") && tt.startsWith("0")) {
-            System.out.println(24);
             horse = lists.stream().
                     filter(h -> h.getCommunityid() == Integer.parseInt(qq)).
                     filter(h -> h.getArea() >= Double.parseDouble(r[0])).filter(h -> h.getArea() < Double.parseDouble(r[1])).
@@ -140,7 +127,6 @@ public class SelectedServlet extends HttpServlet {
         }
         //面积，房型未选择34
         if (!qq.startsWith("0") && !w[0].startsWith("0") && r[0].startsWith("0") && tt.startsWith("0") && !"".equals(qq) && !"".equals(ww) && !"".equals(rr) && !"".equals(tt)) {
-            System.out.println(34);
             horse = lists.stream().
                     filter(h -> h.getCommunityid() == Integer.parseInt(qq)).
                     filter(h -> h.getRent() >= Double.parseDouble(w[0])).filter(h -> h.getRent() < Double.parseDouble(w[1])).
@@ -149,14 +135,12 @@ public class SelectedServlet extends HttpServlet {
 
         //租金，房型，面积未选择234
         if (!qq.startsWith("0") && w[0].startsWith("0") && r[0].startsWith("0") && tt.startsWith("0")) {
-            System.out.println(234);
             horse = lists.stream().
                     filter(h -> h.getCommunityid() == Integer.parseInt(qq)).
                     collect(Collectors.toList());
         }
         //均选择0000
         if (!qq.startsWith("0") && !w[0].startsWith("0") && !r[0].startsWith("0") && !tt.startsWith("0") && !"".equals(qq) && !"".equals(ww) && !"".equals(rr) && !"".equals(tt)) {
-            System.out.println("均选择");
             horse = lists.stream().
                     filter(h -> h.getCommunityid() == Integer.parseInt(qq)).
                     filter(h -> h.getRent() >= Double.parseDouble(w[0])).filter(h -> h.getRent() < Double.parseDouble(w[1])).

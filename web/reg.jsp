@@ -11,6 +11,7 @@
         $(function () {
             //导航定位
             $(".nav li:eq(6)").addClass("navCur");
+
         })
     </script>
 </head>
