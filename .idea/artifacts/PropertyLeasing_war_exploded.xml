@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="PropertyLeasing:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/PropertyLeasing_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="PropertyLeasing/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="PropertyLeasing" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
