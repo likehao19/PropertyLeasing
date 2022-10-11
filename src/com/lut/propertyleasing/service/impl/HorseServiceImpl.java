@@ -33,6 +33,7 @@ public class HorseServiceImpl implements IHorseService {
         return dao.findAllByCategoryId(categoryid);
     }
 
+    //查看全部房源
     @Override
     public List<HorseEntity> findAllHorse(int categoryid) {
         return dao.findAllHorse(categoryid);

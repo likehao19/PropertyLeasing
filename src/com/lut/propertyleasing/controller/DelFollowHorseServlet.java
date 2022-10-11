@@ -5,6 +5,9 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+/**
+ * 删除关注
+ */
 @WebServlet(name = "DelFollowHorseServlet", value = "/DelFollowHorseServlet")
 public class DelFollowHorseServlet extends HttpServlet {
     @Override

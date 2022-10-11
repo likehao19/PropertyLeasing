@@ -9,6 +9,9 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+/**
+ * 申请经纪人
+ */
 @WebServlet(name = "ApplyAgentServlet", value = "/ApplyAgentServlet")
 public class ApplyAgentServlet extends HttpServlet {
 

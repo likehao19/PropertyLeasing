@@ -75,35 +75,4 @@ public class AgentDaoImpl extends JdbcUtils implements IAgentDao {
         }
         return false;
     }
-
-    //上传图片
-    @Override
-    public boolean imgUpload(int userid, String aimg) {
-        PreparedStatement pst = null;
-        ResultSet rs = null;
-        try {
-            openConnection();
-            String sql = "insert into t_agent where aimg=? userid=userid";
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            AgentEntity agent = null;
-            List<AgentEntity> agents = new ArrayList<>();
-            while (rs.next()) {
-                agent = new AgentEntity();
-                agent.setId(rs.getInt("id"));
-                agent.setWorkunit(rs.getString("workunit"));
-                agent.setName(rs.getString("name"));
-                agent.setCity(rs.getString("city"));
-                agent.setPhone(rs.getString("phone"));
-                agent.setCommunityname(rs.getString("communityname"));
-                agent.setCategoryname(rs.getString("categoryname"));
-                agent.setAimg(rs.getString("aimg"));
-                agents.add(agent);
-            }
-            return true;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
 }

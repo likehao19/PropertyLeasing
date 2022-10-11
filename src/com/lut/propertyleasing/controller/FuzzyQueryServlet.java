@@ -10,6 +10,10 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * 模糊查询
+ */
+
 @WebServlet(name = "FuzzyQueryServlet", value = "/FuzzyQueryServlet")
 public class FuzzyQueryServlet extends HttpServlet {
     @Override

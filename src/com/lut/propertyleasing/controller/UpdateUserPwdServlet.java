@@ -10,6 +10,9 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+/**
+ * 更换密码
+ */
 @WebServlet(name = "UpdateUserPwdServlet", value = "/UpdateUserPwdServlet")
 public class UpdateUserPwdServlet extends HttpServlet {
     @Override

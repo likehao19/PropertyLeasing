@@ -16,6 +16,4 @@ public interface IAgentDao {
     //申请自由经纪人
     boolean applyAgent(int userid, String phone, String name, String workyears, String certification, String describe, String showphone, String communityid, String sex, String age, String iDcard, String usernaem, String education, String qq_number);
 
-    //上传图片
-    boolean imgUpload(int userid, String aimg);
 }

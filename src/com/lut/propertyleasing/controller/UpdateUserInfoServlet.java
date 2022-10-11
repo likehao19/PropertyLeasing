@@ -5,14 +5,17 @@ import com.lut.propertyleasing.entity.UserEntity;
 import com.lut.propertyleasing.service.IUserService;
 import com.lut.propertyleasing.service.impl.UserServiceImpl;
 
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
+/**
+ * 更新用户信息
+ */
 @WebServlet(name = "UpdateUserInfoServlet", value = "/UpdateUserInfoServlet")
 public class UpdateUserInfoServlet extends HttpServlet {
     @Override

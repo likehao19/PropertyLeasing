@@ -13,6 +13,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * 最新房源
+ */
 @WebServlet(name = "NewHorseServlet", value = "/NewHorseServlet")
 public class NewHorseServlet extends HttpServlet {
     @Override

@@ -1,7 +1,6 @@
 package com.lut.propertyleasing.controller;
 
 import com.lut.propertyleasing.entity.FollowEntity;
-import com.lut.propertyleasing.entity.HorseEntity;
 import com.lut.propertyleasing.entity.UserEntity;
 import com.lut.propertyleasing.service.IFollowService;
 import com.lut.propertyleasing.service.impl.FollowServiceImpl;
@@ -12,6 +11,9 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * 查询关注房源
+ */
 @WebServlet(name = "FindAllFollowHorseServlet", value = "/FindAllFollowHorseServlet")
 public class FindAllFollowHorseServlet extends HttpServlet {
     @Override

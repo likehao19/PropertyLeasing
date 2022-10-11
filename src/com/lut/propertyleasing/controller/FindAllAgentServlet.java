@@ -10,6 +10,9 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * 查询所有经纪人
+ */
 @WebServlet(name = "FindAllAgentServlet", value = "/FindAllAgentServlet")
 public class FindAllAgentServlet extends HttpServlet {
     @Override

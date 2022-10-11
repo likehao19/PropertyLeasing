@@ -12,6 +12,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * 多条件筛选
+ */
 @WebServlet(name = "SelectedServlet", value = "/SelectedServlet")
 public class SelectedServlet extends HttpServlet {
     @Override

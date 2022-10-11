@@ -13,6 +13,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * 按时间，价格排序
+ */
 @WebServlet(name = "SortHorseServlet", value = "/SortHorseServlet")
 public class SortHorseServlet extends HttpServlet {
     @Override

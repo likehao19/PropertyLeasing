@@ -29,10 +29,4 @@ public class AgentServiceImpl implements IAgentService {
                 , age, iDcard, usernaem, education, qq_number);
     }
 
-    //上传图片
-    @Override
-    public boolean imgUpload(int userid, String aimg) {
-        return dao.imgUpload(userid,aimg);
-    }
-
 }
