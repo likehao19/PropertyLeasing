@@ -29,26 +29,6 @@
         </div><!--vip-left/-->
         <div class="vip-right">
             <h3 class="vipright-title">申请社区自由经纪人</h3>
-
-
-          <%--  <form enctype="multipart/form-data" id="form">
-                <dl class="vip-touxiang">
-                    <dt>
-                        <div class="imgUpload">
-                            <img src="${sessionScope.USER.uimg}" width="100" height="100"/>
-                        </div>
-                    </dt>
-                    <dd>
-                        <div class="sctx" id="sctx">
-                            <input type="file" id="file" name="file "/><a href="#">点击选择头像 </a>
-                        </div>
-                        <input type="button" onclick="uploadImg()" style="width: 100px;border: #f8f8f8 0px " value="上传">
-                        <p>图片格式：GIF、JPG、JPEG、PNG ，最适合尺寸100*100像素</p>
-                    </dd>
-                    <div class="clearfix"></div>
-                </dl><!--vip-touxiang/-->
-            </form>--%>
-
             <form action="ApplyAgentServlet" method="post">
                 <table class="grinfo">
                     <tbody>
